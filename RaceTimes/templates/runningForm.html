@@ -1,0 +1,20 @@
+{% extends "base.html" %}{% block title %}Race Predictor{% endblock %}
+
+{% block content %}
+<h1>Running Form</h1>
+<hr>
+
+<form method="POST">
+    <label for="video">Select video:</label>
+    <input type="file" id="video" name="video" onchange="selectedVideo(this)" accept="video/*">
+    <input type="submit">
+  </form> 
+
+  <video id="video" width="320" height="240" controls>
+    <source src="{{ videoSource }}" id="source" type="video/mp4">
+  Your browser does not support the video tag.
+  </video> 
+
+  <h3>This is the video source: {{ videoSource }} </h3>
+
+ {% endblock %}

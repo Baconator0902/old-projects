@@ -1,0 +1,42 @@
+{% extends "base.html" %}{% block title %}Race Predictor{% endblock %}
+
+{% block content %}
+<h1>Race Predictor</h1>
+<hr>
+<h3>Put your time</h3>
+<form method="POST">
+    <div class="form-group">
+        <label for="minutes">Minutes:</label>
+        <input type="text" class="form-control" id="minutes" name="minutes" placeholder="0">
+    </div>
+    <div class="form-group">    
+        <label for="seconds">Seconds:</label>
+        <input type="text" class="form-control" id="seconds" name="seconds" placeholder="0">
+    </div>
+    <p>Select the race length</p>
+    <div style="display: block; margin-left:3%">
+    <input type="radio" id="00_meter" name="firstRace" value="400 meter">
+    <label for="400_meter">400 meter</label><br>
+    <input type="radio" id="800_meter" name="firstRace" value="800 meter">
+    <label for="800_meter">800 meter</label><br>
+    <input type="radio" id="1600_meter" name="firstRace" value="1600 meter">
+    <label for="1600_meter">1600 meter</label><br>
+    <input type="radio" id="5k" name="firstRace" value="5k">
+    <label for="5k">5k</label><br>
+    </div>
+
+<p>Choose the race you want to predict</p>
+<div style="display: block; margin-left:3%">
+    <input type="radio" id="00_meter" name="secondRace" value="400 meter">
+    <label for="400_meter">400 meter</label><br>
+    <input type="radio" id="800_meter" name="secondRace" value="800 meter">
+    <label for="800_meter">800 meter</label><br>
+    <input type="radio" id="1600_meter" name="secondRace" value="1600 meter">
+    <label for="1600_meter">1600 meter</label><br>
+    <input type="hidden" name="submitNumber" value="1">
+    <input type="radio" id="5k" name="secondRace" value="5k">
+    <label for="5k">5k</label><br>
+</div>
+<button class="btn btn-primary" type="submit">Submit</button>
+</form>
+ {% endblock %}

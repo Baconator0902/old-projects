@@ -1,5 +1,15 @@
 # Basic ML for race time prediction
 
-Basic python gui that will predict race times for a race of x distance based on inputted time for y distance. 
+Basic python integrated with HTML 
 
-Part of the software TSA project that was later added to the website with much better GUI. 
+Part of the software TSA project that I have lost to time
+
+### Functions
+
+`Predicts race times for a race of x distance based on inputted time for y distance`
+
+Full software 
+
+`Analyzes running form from a video`
+
+`Can log activities to backend SQL database with PHP`

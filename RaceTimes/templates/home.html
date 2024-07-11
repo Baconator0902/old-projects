@@ -1,0 +1,14 @@
+{% extends "base.html" %}{% block title %}Race Predictor{% endblock %}
+
+{% block content %}
+<h1>Home</h1>
+<hr>
+<form action="http://127.0.0.1:5000/views">
+    <input type="submit" value="Predict race time" />
+</form>
+
+<form action="http://127.0.0.1:5000/runningForm">
+    <input type="submit" value="Inspect running form" />
+</form>
+
+ {% endblock %}

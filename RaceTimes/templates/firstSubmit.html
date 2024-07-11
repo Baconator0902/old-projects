@@ -1,0 +1,29 @@
+{% extends "base.html" %}{% block title %}Race Predictor{% endblock %}
+
+{% block content %}
+<h1>Race Predictor</h1>
+<hr>
+<h3>Your time is predicted to be {{ predictedTime }} </h3>
+
+<hr>
+
+<h3>Help us improve our AI!</h3>
+<p>If you have actually ran this race, please enter your time</p>
+<form method="POST">
+    <div class="form-group">
+        <label for="minutes">Minutes:</label>
+        <input type="text" class="form-control" id="minutes" name="minutes" placeholder="0">
+    </div>
+    <div class="form-group">    
+        <label for="seconds">Seconds:</label>
+        <input type="text" class="form-control" id="seconds" name="seconds" placeholder="0">
+    </div>
+    <input type="hidden" name="submitNumber" value="2">
+    <input type="hidden" name="oldRace" value="{{ oldRace }}">
+    <input type="hidden" name="newRace" value="{{ newRace }}">
+    <input type="hidden" name="oldRaceTimeMinutes" value="{{ oldRaceTimeMinutes }}">
+    <input type="hidden" name="oldRaceTimeSeconds" value="{{ oldRaceTimeSeconds }}">
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+ {% endblock %}
